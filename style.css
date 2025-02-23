@@ -3,6 +3,7 @@
     padding: 0;
     list-style: none;
     font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 a{
     text-decoration: none;
@@ -79,9 +80,7 @@ nav h1 span{
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-}
-}
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;}
 .socialMedia{
     width: 10rem;
     display: flex;
