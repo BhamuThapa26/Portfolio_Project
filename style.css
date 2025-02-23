@@ -31,10 +31,12 @@ width: 25%;
 display: flex;
 font-size: 2rem;
 justify-content: space-evenly;
+padding-top: 1rem;
 }
 
 nav ul li{
     color: var(--lightcolor);
+    transition: color .4s ease-out;
 }
 
 nav ul li:hover{
@@ -73,6 +75,12 @@ nav h1 span{
 }
 .left h1{
     font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
 }
 .socialMedia{
     width: 10rem;
@@ -113,7 +121,7 @@ nav h1 span{
 .outsiderofServices{
     color: var(--darkcolor);
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-top: .5rem;
     text-decoration: underline;   
 }
@@ -127,7 +135,7 @@ nav h1 span{
     padding-top: 1rem;
 }
 .services div{
-     height: 14rem;
+     height: 15rem;
      border: 1px solid var(--darkcolor);
      display: flex;
      flex-direction: column;
@@ -137,11 +145,13 @@ nav h1 span{
      background-color: var(--primarycolor);
      border-radius: 25% 10%;
      line-height: 1.3rem;
+     transition: background-color .6s ease-in-out;
 }
 .services div img{
-    height: 5rem;
-    width: 5rem;
-    margin-top: .5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    margin-top: 2rem;
 }
 .services div h3{
     color: var(--lightcolor);
@@ -155,3 +165,190 @@ nav h1 span{
     cursor: pointer;
     background-color: var(--primarylightcolor);    
 }
+
+#projects{
+    height: 100vh;
+    width: 100%;
+    padding: 0rem 4rem;  
+}
+#projects .carousel-inner img{
+    height: 100vh;
+}
+
+#contact{
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    margin-top: 1rem;
+    padding-top: 0rem;
+}
+.contactLeft{
+    height: 100%;
+    width: 25%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* From Uiverse.io by LilaRest */ 
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 25px 20px 22px;
+    box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #e8e8e8;
+    border-color: #ffe2e2;
+    border-style: solid;
+    border-width: 9px;
+    border-radius: 35px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: 900;
+    color: rgb(134, 124, 124);
+    font-family: monospace;
+    transition:
+      transform 400ms cubic-bezier(0.68, -0.55, 0.27, 2.5),
+      border-color 400ms ease-in-out,
+      background-color 400ms ease-in-out;
+    word-spacing: -2px;
+  }
+  
+  @keyframes movingBorders {
+    0% {
+      border-color: #fce4e4;
+    }
+  
+    50% {
+      border-color: #ffd8d8;
+    }
+  
+    90% {
+      border-color: #fce4e4;
+    }
+  }
+  
+  button:hover {
+    background-color: #eee;
+    transform: scale(105%);
+    animation: movingBorders 3s infinite;
+  }
+  
+  button svg {
+    margin-right: 11px;
+    fill: rgb(255, 110, 110);
+    transition: opacity 100ms ease-in-out;
+  }
+  
+  .filled {
+    position: absolute;
+    opacity: 0;
+    top: 20px;
+    left: 22px;
+  }
+  
+  @keyframes beatingHeart {
+    0% {
+      transform: scale(1);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    30% {
+      transform: scale(1);
+    }
+  
+    45% {
+      transform: scale(1.15);
+    }
+  
+    60% {
+      transform: scale(1);
+    }
+  }
+  
+  button:hover .empty {
+    opacity: 0;
+  }
+  
+  button:hover .filled {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+  }
+  
+  #signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #f4f4f4;
+    
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primarycolor);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primarycolor); }
+}
+
+.contactRight{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+.contactForm{
+    width: 100%;
+    max-width: 40rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: .8rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+input,textarea{
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    box-sizing: border-box;
+    border-radius: .4rem;
+    border: 1px solid #ccc;
+}
+button{
+    padding: .8rem 1rem;
+    background-color: var(--primarycolor);
+    color: white;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: background-color 1.2s infinite;
+}
+button:hover{
+    background-color: var(--primarylightcolor);
+}
+
